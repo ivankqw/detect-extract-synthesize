@@ -11,7 +11,7 @@
   "dependencies": {
     "@heroicons/react": "^2.1.1",
     "@react-hook/resize-observer": "^1.2.6",
-    "ai": "^2.2.37",
+    "ai": "^7.0.99",
     "next": "15.5.24",
     "react": "^18",
     "react-dom": "^18",
