@@ -21,12 +21,6 @@ export interface DocumentData {
     };
 }
 
-export interface PageProps {
-    params: {
-        docId: string;
-    };
-}
-
 // for PDF viewer
 export interface DocumentLoadSuccessParams {
     numPages: number;

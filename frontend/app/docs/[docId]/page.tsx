@@ -5,11 +5,13 @@ import PDFViewer from "../../_components/pdf-viewer";
 import { useCompletion } from "ai/react";
 import Navbar from "../../_components/navbar";
 import Chat from "../../_components/chat";
-import { PageProps, DocumentData, DocumentLoadSuccessParams } from "../../_types/types";
+import { DocumentData, DocumentLoadSuccessParams } from "../../_types/types";
 import { PageNavigationContext } from '../../_hooks/PageNavigationContext';
+import { useParams } from 'next/navigation';
 
 
-const Page: FC<PageProps> = ({ params }) => {
+const Page: FC = () => {
+  const params = useParams<{ docId: string }>();
   // STATES
   const [docData, setDocData] = useState<DocumentData | null>(null);
   const [numPages, setNumPages] = useState<number>(); // Total number of pages in the PDF

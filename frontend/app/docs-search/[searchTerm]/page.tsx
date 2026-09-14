@@ -5,16 +5,11 @@ import Navbar from '../../_components/navbar';
 import Table from '../../_components/doc-table';
 import { Document } from '../../_types/types';
 import Spinner from '../../_components/spinner'; // Import a spinner component
+import { useParams } from 'next/navigation';
 
 
-interface SearchPageProps {
-  params: {
-    searchTerm: string;
-  };
-}
-
-
-const Page: FC<SearchPageProps> = ({ params }) => {
+const Page: FC = () => {
+  const params = useParams<{ searchTerm: string }>();
   const [documents, setDocuments] = useState<Document[]>([]);
   const [loading, setLoading] = useState(false);
 
